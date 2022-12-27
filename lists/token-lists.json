@@ -1,0 +1,15 @@
+{
+  "https://tokens.plexfinance.us/plexswap-default.json": {
+    "name": "Plexswap Default",
+    "homepage": "https://swap.plexfinance.us"
+  },
+  "https://tokens.plexfinance.us/plexswap-extended.json": {
+    "name": "Plexswap Extended",
+    "homepage": "https://swap.plexfinance.us"
+    
+  },
+  "https://tokens.coingecko.com/binance-smart-chain/all.json": {
+    "name": "CoinGecko",
+    "homepage": "https://www.coingecko.com"
+  }
+}
