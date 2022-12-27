@@ -25,7 +25,7 @@ type Version = {
 const lists = {
   "plexswap-default": {
     list: plexswapDefault,
-    name: "plexswap Default",
+    name: "Plexswap Default",
     keywords: ["plexswap", "default"],
     logoURI: "https://swap.plexfinance.us/logo.png",
     sort: false,
@@ -33,7 +33,7 @@ const lists = {
   },
   "plexswap-extended": {
     list: plexswapExtended,
-    name: "plexswap Extended",
+    name: "Plexswap Extended",
     keywords: ["plexswap", "extended"],
     logoURI: "https://swap.plexfinance.us/logo.png",
     sort: true,
