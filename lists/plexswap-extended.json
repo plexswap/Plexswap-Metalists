@@ -1,12 +1,12 @@
 {
   "name": "Plexswap Extended",
-  "timestamp": "2022-12-27T18:59:08.165Z",
+  "timestamp": "2022-12-27T19:38:26.871Z",
   "version": {
     "major": 1,
     "minor": 1,
-    "patch": 4
+    "patch": 5
   },
-  "logoURI": "https://swap.plexfinance.us/logo.png",
+  "logoURI": "https://metalists.plexfinance.us/images/common/plex.png",
   "keywords": [
     "plexswap",
     "extended"
