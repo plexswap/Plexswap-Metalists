@@ -1,9 +1,9 @@
 {
-  "https://tokens.plexfinance.us/plexswap-default.json": {
+  "https://metalists.plexfinance.us/plexswap-default.json": {
     "name": "Plexswap Default",
     "homepage": "https://swap.plexfinance.us"
   },
-  "https://tokens.plexfinance.us/plexswap-extended.json": {
+  "https://metalists.plexfinance.us/plexswap-extended.json": {
     "name": "Plexswap Extended",
     "homepage": "https://swap.plexfinance.us"
     
