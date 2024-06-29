@@ -1,14 +1,7 @@
 import fs from "fs";
 import path from "path";
-import { TokenList } from "@plexswap/metalists";
-import { version as plexswapDefaultVersion } from "../lists/plexswap-default.json";
-import { version as plexswapExtendedVersion } from "../lists/plexswap-extended.json";
-import { version as coingeckoVersion } from "../lists/coingecko.json";
-import { version as cmcVersion } from "../lists/cmc.json";
-import plexswapDefault from "./tokens/plexswap-default.json";
-import plexswapExtended from "./tokens/plexswap-extended.json";
-import coingecko from "./tokens/coingecko.json";
-import cmc from "./tokens/cmc.json";
+import { TokenList } from "./types"
+import { LISTS } from "./constants";
 
 export enum VersionBump {
   "major" = "major",
@@ -22,41 +15,7 @@ type Version = {
   patch: number;
 };
 
-const lists = {
-  "plexswap-default": {
-    list: plexswapDefault,
-    name: "Plexswap Default",
-    keywords: ["plexswap", "default"],
-    logoURI: "https://metalists.plexfinance.us/images/common/plex.png",
-    sort: false,
-    currentVersion: plexswapDefaultVersion,
-  },
-  "plexswap-extended": {
-    list: plexswapExtended,
-    name: "Plexswap Extended",
-    keywords: ["plexswap", "extended"],
-    logoURI: "https://metalists.plexfinance.us/images/common/plex.png",
-    sort: true,
-    currentVersion: plexswapExtendedVersion,
-  },
-  coingecko: {
-    list: coingecko,
-    name: "CoinGecko",
-    keywords: ["defi"],
-    logoURI:
-      "https://www.coingecko.com/assets/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png",
-    sort: true,
-    currentVersion: coingeckoVersion,
-  },
-  cmc: {
-    list: cmc,
-    name: "CoinMarketCap",
-    keywords: ["defi"],
-    logoURI: "https://ipfs.io/ipfs/QmQAGtNJ2rSGpnP6dh6PPKNSmZL8RTZXmgFwgTdy5Nz5mx",
-    sort: true,
-    currentVersion: cmcVersion,
-  },
-};
+const lists = LISTS;
 
 const getNextVersion = (currentVersion: Version, versionBump?: VersionBump) => {
   const { major, minor, patch } = currentVersion;

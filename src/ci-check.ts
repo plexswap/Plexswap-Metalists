@@ -1,32 +1,35 @@
-import srcDefault from "./tokens/plexswap-default.json";
-import srcExtended from "./tokens/plexswap-extended.json";
-import srcCoingecko from "./tokens/coingecko.json";
-import srcCmc from "./tokens/cmc.json";
-import defaultList from "../lists/plexswap-default.json";
-import extendedtList from "../lists/plexswap-extended.json";
-import coingeckoList from "../lists/coingecko.json";
-import cmcList from "../lists/cmc.json";
+import { LISTS } from "./constants";
 
 const lists = [
   {
     name: "plexswap-default",
-    src: srcDefault,
-    actual: defaultList,
+    src: LISTS["plexswap-default"].list,
+    actual: LISTS["plexswap-default"].listFile,
   },
   {
     name: "plexswap-extended",
-    src: srcExtended,
-    actual: extendedtList,
+    src: LISTS["plexswap-extended"].list,
+    actual: LISTS["plexswap-extended"].listFile,
   },
   {
-    name: "coingeckoList",
-    src: srcCoingecko,
-    actual: coingeckoList,
+    name: "plexswap-onramp",
+    src: LISTS["plexswap-onramp"].list,
+    actual: LISTS["plexswap-onramp"].listFile,
   },
   {
-    name: "cmcList",
-    src: srcCmc,
-    actual: cmcList,
+    name: "plexswap-mmbsc",
+    src: LISTS["plexswap-mmbsc"].list,
+    actual: LISTS["plexswap-mmbsc"].listFile,
+  },
+  {
+    name: "coingecko",
+    src: LISTS["coingecko"].list,
+    actual: LISTS["coingecko"].listFile,
+  },
+  {
+    name: "cmc",
+    src: LISTS["cmc"].list,
+    actual: LISTS["cmc"].listFile,
   },
 ];
 

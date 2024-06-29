@@ -3,13 +3,10 @@ import Ajv from "ajv";
 import fs from "fs";
 import path from "path";
 import { getAddress } from "@ethersproject/address";
-import plexswapSchema from "@plexswap/metalists/schema/metalists-schema.json";
-import currentPlexswapDefaultList from "../lists/plexswap-default.json";
-import currentPlexswapExtendedtList from "../lists/plexswap-extended.json";
-import currentCoingeckoList from "../lists/coingecko.json";
-import currentCmcList from "../lists/cmc.json";
+import plexswapSchema from "./schema.json";
 import { buildList, VersionBump } from "../src/buildList";
 import getTokenChainData from "../src/utils/getTokensChainData";
+import { LISTS } from "./../src/constants";
 
 const listArgs = process.argv
   ?.find((arg) => arg.includes("--list="))
@@ -19,6 +16,8 @@ const listArgs = process.argv
 const CASES = [
   ["plexswap-default"],
   ["plexswap-extended"],
+  ["plexswap-onramp"],
+  ["plexswap-mmbsc"],
   ["coingecko", { skipLogo: true, aptos: false }],
   ["cmc", { skipLogo: true, aptos: false }],
 ] as const;
@@ -26,10 +25,12 @@ const CASES = [
 const cases = listArgs ? CASES.filter((c) => c[0] === listArgs) : CASES;
 
 const currentLists = {
-  "plexswap-default": currentPlexswapDefaultList,
-  "plexswap-extended": currentPlexswapExtendedtList,
-  coingecko: currentCoingeckoList,
-  cmc: currentCmcList,
+  "plexswap-default":   LISTS["plexswap-default"].listFile,
+  "plexswap-extended":  LISTS["plexswap-extended"].listFile,
+  "plexswap-onramp":    LISTS["plexswap-onramp"].listFile,
+  "plexswap-mmbsc":     LISTS["plexswap-mmbsc"].listFile,
+   coingecko:           LISTS["coingecko"].listFile,
+   cmc:                 LISTS["cmc"].listFile,
 };
 
 const ajv = new Ajv({ allErrors: true, format: "full" });
@@ -101,10 +102,10 @@ expect.extend({
     const hasTWLogo =
       token.logoURI === `https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/${token.address}/logo.png`;
     let hasLocalLogo = false;
-    const refersToLocalLogo = token.logoURI === `https://metalists.plexfinance.us/images/${token.address}.png`;
+    const refersToLocalLogo = token.logoURI === `https://assets.plexfinance.us/images/tokens/bsc/${token.address}.png`;
     if (refersToLocalLogo) {
       const fileName = token.logoURI.split("/").pop();
-      // Note: fs.existsSync can't be used here because its not case sensetive
+      // Note: fs.existsSync can't be used here because its not case sensitive
       hasLocalLogo = logoFiles.map((f) => f.name).includes(fileName);
     }
     if (hasTWLogo || hasLocalLogo) {

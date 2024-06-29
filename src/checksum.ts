@@ -1,21 +1,13 @@
 import fs from "fs";
 import path from "path";
 import { getAddress } from "@ethersproject/address";
-import plexswapDefault from "./tokens/plexswap-default.json";
-import plexswapExtended from "./tokens/plexswap-extended.json";
-import coingecko from "./tokens/coingecko.json";
-import cmc from "./tokens/cmc.json";
+import { LISTS } from "./constants";
 
-const lists = {
-  "plexswap-default": plexswapDefault,
-  "plexswap-extended": plexswapExtended,
-  coingecko,
-  cmc,
-};
+const lists = LISTS
 
 const checksumAddresses = (listName: string): void => {
   let badChecksumCount = 0;
-  const listToChecksum = lists[listName];
+  const listToChecksum = lists[listName].list;
   const updatedList = listToChecksum.reduce((tokenList, token) => {
     const checksummedAddress = getAddress(token.address);
     if (checksummedAddress !== token.address) {

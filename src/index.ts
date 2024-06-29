@@ -2,7 +2,6 @@ import { buildList, saveList, VersionBump } from "./buildList";
 import checksumAddresses from "./checksum";
 import ciCheck from "./ci-check";
 import fetchThirdPartyList from "./fetchThirdPartyList";
-import getTokensChainData from "./utils/getTokensChainData";
 
 const command = process.argv[2];
 const listName = process.argv[3];
