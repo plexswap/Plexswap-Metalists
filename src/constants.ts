@@ -22,7 +22,7 @@ export const LISTS = {
     list: plexswapDefault,
     name: "Plexswap Default",
     keywords: ["plexswap", "default"],
-    logoURI: "https://assets.plexfinance.us/images/tokens/common/plex.png",
+    logoURI: "https://metalists.plexfinance.us/images/symbol/plex.png",
     sort: false,
     currentVersion: plexswapDefaultVersion,
     listFile: defaultList
@@ -31,7 +31,7 @@ export const LISTS = {
     list: plexswapExtended,
     name: "Plexswap Extended",
     keywords: ["plexswap", "extended"],
-    logoURI: "https://assets.plexfinance.us/images/tokens/common/plex.png",
+    logoURI: "https://metalists.plexfinance.us/images/symbol/plex.png",
     sort: true,
     currentVersion: plexswapExtendedVersion,
     listFile: extendedList
@@ -40,7 +40,7 @@ export const LISTS = {
     list: plexswapOnramp,
     name: "Plexswap Onramp",
     keywords: ["plexswap", "onramp"],
-    logoURI: "https://assets.plexfinance.us/images/tokens/common/plex.png",
+    logoURI: "https://metalists.plexfinance.us/images/symbol/plex.png",
     sort: true,
     currentVersion: plexswapOnrampVersion,
     listFile: onrampList
@@ -49,7 +49,7 @@ export const LISTS = {
     list: plexswapMMbsc,
     name: "Plexswap BNB Chain MM",
     keywords: ["plexswap", "mmbsc"],
-    logoURI: "https://assets.plexfinance.us/images/tokens/common/plex.png",
+    logoURI: "https://metalists.plexfinance.us/images/symbol/plex.png",
     sort: false,
     currentVersion: plexswapMMbscVersion,
     listFile: mmbscList

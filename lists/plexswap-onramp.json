@@ -6,7 +6,7 @@
     "minor": 0,
     "patch": 2
   },
-  "logoURI": "https://assets.plexfinance.us/images/tokens/common/plex.png",
+  "logoURI": "https://metalists.plexfinance.us/images/symbol/plex.png",
   "keywords": [
     "plexswap",
     "onramp"
@@ -18,7 +18,7 @@
       "symbol": "BUSD",
       "decimals": 18,
       "chainId": 56,
-      "logoURI": "https://assets.plexfinance.us/images/tokens/bsc/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+      "logoURI": "https://metalists.plexfinance.us/images/bsc/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
     }
   ]
 }
